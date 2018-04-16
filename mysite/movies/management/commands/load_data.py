@@ -44,54 +44,80 @@ class Command(BaseCommand):
         # a row counter
         for i, row in enumerate(data):
             # for j, theater in enumerate(row):
-            theater_name = row['name']
-            self.stdout.write(theater_name)
+            theaters = row['theaters']
+            for j, theater in enumerate(theaters):
+                try:
+                    th_name = theater['name']
+                    th_id = theater['id']
+                    th_address = theater['address1']
+                    th_phone = theater['phone']
+                    th_geo = theater['geo']
+                    # for k, location in enumerate(th_geo):
+                    #     th_lat = location[0]
+                    #     th_long = location[1]
 
-            # If we don't have this data add the row to the skipped list and
-            # continue to the next item in the for loop
-            # if not country_name or not category_name or not gender:
-            #     skipped.append(row)
-            #     continue
+                    theater_instance, _ = Theater.objects.get_or_create(
+                        name = th_name,
+                        th_id = th_id,
+                        address = th_address,
+                        phone = th_phone,
+                        lat = 0.0000,
+                        long = 0.0000,
+                    )
 
-            # Here we will create the objects that a winning record relies on.
-            # We use the get_or_create method to avoid creating duplicaates
-            # https://docs.djangoproject.com/en/2.0/ref/models/querysets/#get-or-create
-            # This lets us create a new category object called "Physics" the first
-            # time we see it but otherwise return the already existing category object
-            # from the database and use it.
-            # This is the same for country and person but note that we have to
-            # specify all the fields for the person object.
-            # country, _ = Country.objects.get_or_create(name=country_name)
-            # category, _ = Category.objects.get_or_create(name=category_name)
-            # person, _ = Person.objects.get_or_create(
-            #     name=row['name'],
-            #     gender=row['gender'],
-            #     dob=datetime.datetime.fromtimestamp(row['date_of_birth'] / 1000),
-            # )
+                    th_movies = theater.get('movies')
+                    if(th_movies):
+                        th_movie_list = []
+                        for m, movie in enumerate(th_movies):
 
-            # Now that we have created our dependencies we can create a winner
-            # record which ties all the objects together along with the year
-            # that the award was won.
-            # w = Winner.objects.get_or_create(
-            #     person=person,
-            #     country=country,
-            #     category=category,
-            #     year=row['year'],
-            # )
+                            movie_instance, _ = Movie.objects.get_or_create(
+                                movie_id = movie['id'],
+                                title = movie['title'],
+                                runtime = movie['runtime'],
+                                releaseDate = movie['releaseDate'][0:10],
+                                poster = movie['poster']['size']['full'][2:],
+                                rating = movie['rating'],
+                                movie_genre = movie['genres'][0],
+                            )
+                            movie_instance.theaters.add(theater_instance)
+                            theater_instance.movie_set.add(movie_instance)
+                            #th_movie_list.append(movie["title"])
 
-            # Now we tell the user which object count we just updated.
-            # By using the line ending `\r` (return) we return to the begginging
-            # of the line and start writing again. This writes over the same line
-            # and gives the illusion of the count incrementing without cluttering
-            # the screens output.
-            # self.stdout.write(self.style.SUCCESS('Processed {}/{}'.format(i + 1, total)), ending='\r')
-            # # We call flush to force the output to be written
-            # self.stdout.flush()
+                            variants = movie.get('variants')
+                            if variants:
+                                for v, variant in enumerate(variants):
+                                    amenityGroups = variant.get('amenityGroups')
+                                    if amenityGroups:
+                                        for a, amenity in enumerate(amenityGroups):
+                                            showtimes = amenity.get('showtimes')
+                                            if showtimes:
+                                                for s, showtime in enumerate(showtimes):
+                                                    showtime_instance, _ = Showtime.objects.get_or_create(
+                                                        movie = movie_instance,
+                                                        theater = theater_instance,
+                                                        time = showtime['date'],
+                                                        tickets = showtime['ticketingUrl'],
+                                                    )
+                # If we don't have some data/something breaks add the row to the skipped list and
+                # continue to the next item in the for loop
+                except:
+                    skipped.append(theater)
+                    print(th_name)
+                    continue
 
-        # If we have any skipped rows write them out as json.
-        # Then the user can manually evaluate / edit the json and reload it once
-        # it has been fixed with `manage.py load_winners skipped.json`
-        # if skipped:
-        #     self.stdout.write(self.style.WARNING("Skipped {} records".format(len(skipped))))
-        #     with open('skipped.json', 'w') as fh:
-        #         json.dump(skipped, fh)
+                # Now we tell the user which object count we just updated.
+                # By using the line ending `\r` (return) we return to the begginging
+                # of the line and start writing again. This writes over the same line
+                # and gives the illusion of the count incrementing without cluttering
+                # the screens output.
+                self.stdout.write(self.style.SUCCESS('Processed {}/{}'.format(i + 1, total)), ending='\r')
+                # # We call flush to force the output to be written
+                self.stdout.flush()
+
+    # If we have any skipped rows write them out as json.
+    # Then the user can manually evaluate / edit the json and reload it once
+    # it has been fixed with `manage.py load_winners skipped.json`
+        if skipped:
+            self.stdout.write(self.style.WARNING("Skipped {} records".format(len(skipped))))
+            with open('skipped.json', 'w') as fh:
+                json.dump(skipped, fh)
