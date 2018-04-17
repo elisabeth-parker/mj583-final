@@ -52,6 +52,13 @@ class Command(BaseCommand):
                     th_address = theater['address1']
                     th_phone = theater['phone']
                     th_geo = theater['geo']
+                    th_city = theater['city']
+                    # if th_city == "Cary" or th_city == "Raleigh" or th_city == "Morrisville" or th_city == "Cary" or th_city == "Holly Springs":
+                    #     th_county = "Wake County"
+                    # elif th_city == "Durham":
+                    #     th_county = "Durham County"
+                    # else:
+                    #     th_county = "Orange County"
                     # for k, location in enumerate(th_geo):
                     #     th_lat = location[0]
                     #     th_long = location[1]
@@ -63,6 +70,7 @@ class Command(BaseCommand):
                         phone = th_phone,
                         lat = 0.0000,
                         long = 0.0000,
+                        city = th_city,
                     )
 
                     th_movies = theater.get('movies')

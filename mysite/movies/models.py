@@ -7,6 +7,7 @@ class Theater(models.Model):
     th_id = models.CharField(max_length=10, unique=True)
     lat = models.DecimalField(max_digits=10,decimal_places=4, null=True)
     long = models.DecimalField(max_digits=10,decimal_places=4, null=True)
+    city = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name + ' (' + self.th_id + ')'
