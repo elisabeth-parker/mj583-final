@@ -7,7 +7,7 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-4">
+        <div class="col-6">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-6">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">
@@ -27,18 +27,6 @@
                     </h5>
                     <p class="card-text">
                         <a href="{% url "movies:theaters-list" %}">{{ theaters.count }} Theaters</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Categories
-                    </h5>
-                    <p class="card-text">
-                        <a href="{% url "winners:categories-list" %}">{{ categories.count }} Categories</a>
                     </p>
                 </div>
             </div>

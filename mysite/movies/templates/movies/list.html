@@ -28,9 +28,16 @@
                   {% for o in objects %}
                     <tr>
                         <td>
-                              <a href="{{ o.get_absolute_url }}">
-                                  {{ o }}
-                              </a>
+                          {% if list_type == "Movies" %}
+                            <a href="/movies/movies/{{ o.movie_id }}">
+                              {{ o }} Movie!
+                            </a>
+                          {% else %}
+                            <a href="/movies/theaters/{{ o.th_id }}">
+                              {{ o }} Theater!
+                            </a>
+                          {% endif %}
+
                         </td>
                     </tr>
                   {% endfor %}

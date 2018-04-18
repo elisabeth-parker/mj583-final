@@ -18,7 +18,7 @@ class Movie(models.Model):
     movie_id = models.IntegerField(unique=True)
     runtime = models.IntegerField()
     releaseDate = models.DateField()
-    poster = models.URLField()
+    poster = models.CharField(max_length=300)
     rating = models.CharField(max_length=10, null=True)
     movie_genre = models.CharField(max_length=50, null=True)
 
