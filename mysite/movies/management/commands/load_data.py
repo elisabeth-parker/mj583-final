@@ -52,6 +52,8 @@ class Command(BaseCommand):
                     th_address = theater['address1']
                     th_phone = theater['phone']
                     th_geo = theater['geo']
+                    th_lat = th_geo['latitude']
+                    th_lng = th_geo['longitude']
                     th_city = theater['city']
                     # if th_city == "Cary" or th_city == "Raleigh" or th_city == "Morrisville" or th_city == "Cary" or th_city == "Holly Springs":
                     #     th_county = "Wake County"
@@ -68,8 +70,8 @@ class Command(BaseCommand):
                         th_id = th_id,
                         address = th_address,
                         phone = th_phone,
-                        lat = 0.0000,
-                        long = 0.0000,
+                        lat = th_lat,
+                        long = th_lng,
                         city = th_city,
                     )
 

@@ -3,6 +3,7 @@ from django.core import serializers
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.http import JsonResponse
+from django.forms.models import model_to_dict
 from . import models
 
 
@@ -77,5 +78,21 @@ def theater_detail(request, th_id):
         'movies' : movie_objects,
       }
       return render(request, "movies/theater_detail.html", context)
+
+def api(request, slug):
+
+    if slug == 'movies':
+        data = models.Movie.objects.values()
+        print("type is movies")
+    elif slug == 'showtimes':
+        data = models.Showtime.objects.values()
+        print("type is showtimes")
+    else:
+        data = models.Theater.objects.values()
+        print("type is other, showing theaters")
+
+    f_data = {"Data": [w for w in data]}
+
+    return JsonResponse(f_data)
 
 # Create your views here.

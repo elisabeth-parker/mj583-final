@@ -34,34 +34,14 @@
     </div>
     <hr>
     <div class="row">
-        <div class="col-4">
-            <h4>Category</h4>
-            <select name="category" id="sel-category">
-                    <option value="">All</option>
-                {% for category in categories %}
-                    <option value="{{ category.name }}">{{ category.name }}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <div class="col-4">
-            <h4>Country</h4>
-            <select name="country" id="sel-country">
-                <option value="">All</option>
-                {% for country in countries %}
-                    <option value="{{ country.name }}">{{ country.name }}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <div class="col-4">
-            <h4>Gender</h4>
-            <select name="gender" id="sel-gender">
-                <option value="">All</option>
-                {% for gender in genders %}
-                    <option value="{{ gender.0 }}">{{ gender.1 }}</option>
-                {% endfor %}
-            </select>
+      <div id="map"></div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <pre id="raw-json"></pre>
         </div>
     </div>
+    <hr>
     <div class="row">
         <div class="col-12">
             <pre id="raw-json"></pre>
@@ -70,5 +50,23 @@
 {% endblock %}
 
 {% block script %}
+  <!-- <script>
+  function initMap() {
+    var uluru = {lat: -25.363, lng: 131.044};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+  </script> -->
+  <script src="{% static "movies/js/home.js" %}"></script>
+  <script src="{% static "movies/js/map.js" %}"></script>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQoCNMvFuEHWambNcr82R-oq3J3IEn8pU&callback=initMap">
+  </script>
+
     <!-- <script src="{% static "winners/js/home.js" %}"></script> -->
 {% endblock %}
