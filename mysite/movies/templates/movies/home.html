@@ -11,10 +11,10 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">
-                        Movies
+                        Where can I go watch a movie?
                     </h5>
                     <p class="card-text">
-                        <a href="{% url "movies:movies-list" %}">{{ movies.count }} Movies</a>
+                        <a href="{% url "movies:theaters-list" %}">{{ theaters.count }} Theaters</a>
                     </p>
                 </div>
             </div>
@@ -23,10 +23,10 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">
-                        Theaters
+                        What's showing right now?
                     </h5>
                     <p class="card-text">
-                        <a href="{% url "movies:theaters-list" %}">{{ theaters.count }} Theaters</a>
+                        <a href="{% url "movies:movies-list" %}">{{ movies.count }} Movies</a>
                     </p>
                 </div>
             </div>
@@ -35,17 +35,7 @@
     <hr>
     <div class="row">
       <div id="map"></div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <pre id="raw-json"></pre>
-        </div>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-12">
-            <pre id="raw-json"></pre>
-        </div>
+      <div id="bar"></div>
     </div>
 {% endblock %}
 
@@ -63,10 +53,12 @@
     });
   }
   </script> -->
-  <script src="{% static "movies/js/home.js" %}"></script>
-  <script src="{% static "movies/js/map.js" %}"></script>
   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQoCNMvFuEHWambNcr82R-oq3J3IEn8pU&callback=initMap">
   </script>
+  <script src="{% static "movies/js/home.js" %}"></script>
+  <script src="{% static "movies/js/map.js" %}"></script>
+  <script src="{% static "movies/js/bar.js" %}"></script>
+
 
     <!-- <script src="{% static "winners/js/home.js" %}"></script> -->
 {% endblock %}

@@ -2,6 +2,7 @@ import datetime
 import json
 
 from django.core.management.base import BaseCommand, CommandError
+from django.core import serializers
 from movies.models import Movie, Showtime, Theater
 
 # Here we are creating a custom management command to load our winner data into
@@ -89,9 +90,6 @@ class Command(BaseCommand):
                                 rating = movie['rating'],
                                 movie_genre = movie['genres'][0],
                             )
-                            movie_instance.theaters.add(theater_instance)
-                            theater_instance.movie_set.add(movie_instance)
-                            #th_movie_list.append(movie["title"])
 
                             variants = movie.get('variants')
                             if variants:
@@ -123,6 +121,11 @@ class Command(BaseCommand):
                 self.stdout.write(self.style.SUCCESS('Processed {}/{}'.format(i + 1, total)), ending='\r')
                 # # We call flush to force the output to be written
                 self.stdout.flush()
+
+                JSONSerializer = serializers.get_serializer("json")
+                json_serializer = JSONSerializer()
+                with open('movies.json', 'w') as out:
+                    json_serializer.serialize(Movie.objects.all(), stream=out)
 
     # If we have any skipped rows write them out as json.
     # Then the user can manually evaluate / edit the json and reload it once

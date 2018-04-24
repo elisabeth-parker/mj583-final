@@ -1,4 +1,9 @@
 #map{
-  height: 400px;
-  width: 100%;
+  height: 500px;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+#firstHeading {
+  font-size: 15px;
 }

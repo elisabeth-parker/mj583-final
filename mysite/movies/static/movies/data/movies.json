@@ -1,0 +1,754 @@
+[
+   {
+      "model":"movies.movie",
+      "pk":267,
+      "fields":{
+         "title":"A Quiet Place",
+         "movie_id":207769,
+         "runtime":90,
+         "releaseDate":"2018-04-06",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/207769/AQuietPlace2018.jpg",
+         "rating":"PG13",
+         "movie_genre":"Horror",
+         "theaters":[  
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":268,
+      "fields":{
+         "title":"Blockers",
+         "movie_id":206654,
+         "runtime":102,
+         "releaseDate":"2018-04-06",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/206654/Blockers-Full.jpg",
+         "rating":"R",
+         "movie_genre":"Comedy",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":269,
+      "fields":{
+         "title":"Chappaquiddick",
+         "movie_id":206369,
+         "runtime":101,
+         "releaseDate":"2018-04-06",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/206369/Chappaquiddick_final.jpg",
+         "rating":"PG13",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":270,
+      "fields":{
+         "title":"The Miracle Season",
+         "movie_id":208411,
+         "runtime":99,
+         "releaseDate":"2018-04-06",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/208411/MiracleSeason_FinalPoster.jpg",
+         "rating":"PG",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":271,
+      "fields":{
+         "title":"Tyler Perry's Acrimony",
+         "movie_id":206776,
+         "runtime":120,
+         "releaseDate":"2018-03-30",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/206776/Acrimony_1Sht_Payoff_Online.jpg",
+         "rating":"R",
+         "movie_genre":"Comedy",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":272,
+      "fields":{
+         "title":"Ready Player One",
+         "movie_id":204139,
+         "runtime":140,
+         "releaseDate":"2018-03-29",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/204139/RPO_new_MAIN_VERT_DOM_2764x.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":273,
+      "fields":{
+         "title":"Isle of Dogs",
+         "movie_id":205852,
+         "runtime":101,
+         "releaseDate":"2018-03-23",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/205852/IOD-rated-one-sheet.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":274,
+      "fields":{
+         "title":"I Can Only Imagine",
+         "movie_id":206238,
+         "runtime":110,
+         "releaseDate":"2018-03-16",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/206238/i-can-only-imagine.jpg",
+         "rating":"PG",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":275,
+      "fields":{
+         "title":"Love, Simon",
+         "movie_id":208042,
+         "runtime":110,
+         "releaseDate":"2018-03-16",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/208042/LoveSimon2018.jpg",
+         "rating":"PG13",
+         "movie_genre":"Comedy",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":276,
+      "fields":{
+         "title":"A Wrinkle in Time",
+         "movie_id":203789,
+         "runtime":109,
+         "releaseDate":"2018-03-09",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/203789/AWrinkleInTime5a0efab52a6dd.jpg",
+         "rating":"PG",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":277,
+      "fields":{
+         "title":"The Death of Stalin",
+         "movie_id":204557,
+         "runtime":107,
+         "releaseDate":"2018-03-09",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/204557/Death-Of-Stalin-poster.jpg",
+         "rating":"R",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":278,
+      "fields":{
+         "title":"Black Panther",
+         "movie_id":202991,
+         "runtime":134,
+         "releaseDate":"2018-02-16",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/202991/fan_postertwo_blackpanther_.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":279,
+      "fields":{
+         "title":"The Leisure Seeker",
+         "movie_id":206237,
+         "runtime":112,
+         "releaseDate":"2018-01-19",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/206237/TheLeisureSeeker2018.jpg",
+         "rating":"R",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":280,
+      "fields":{
+         "title":"Pacific Rim Uprising (2018)",
+         "movie_id":183505,
+         "runtime":110,
+         "releaseDate":"2018-03-23",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/183505/PRU_AdvRtd1Sheet_RGB_1.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":281,
+      "fields":{
+         "title":"Midnight Sun (2018)",
+         "movie_id":201176,
+         "runtime":91,
+         "releaseDate":"2018-03-23",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/201176/MIDNIGHTSUN_Poster_Final_.jpg",
+         "rating":"PG13",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":282,
+      "fields":{
+         "title":"Sherlock Gnomes",
+         "movie_id":207507,
+         "runtime":86,
+         "releaseDate":"2018-03-23",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/207507/SG_Online_Rated_Payoff_Vert.jpg",
+         "rating":"PG",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":283,
+      "fields":{
+         "title":"Tomb Raider (2018)",
+         "movie_id":205630,
+         "runtime":118,
+         "releaseDate":"2018-03-16",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/205630/TombRaider_Poster13-3-3.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":284,
+      "fields":{
+         "title":"Red Sparrow",
+         "movie_id":205352,
+         "runtime":139,
+         "releaseDate":"2018-03-02",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/205352/redsparrow-posterart.jpg",
+         "rating":"R",
+         "movie_genre":"Spy Film",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":285,
+      "fields":{
+         "title":"Annihilation",
+         "movie_id":206084,
+         "runtime":115,
+         "releaseDate":"2018-02-23",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/206084/ANN_Dom_Online_Unrated_Vert.jpg",
+         "rating":"R",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":286,
+      "fields":{
+         "title":"Game Night (2018)",
+         "movie_id":207452,
+         "runtime":100,
+         "releaseDate":"2018-02-23",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/207452/GameNight2018.jpg",
+         "rating":"R",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":287,
+      "fields":{
+         "title":"Peter Rabbit",
+         "movie_id":203381,
+         "runtime":95,
+         "releaseDate":"2018-02-09",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/203381/PRBT_Online_1SHT_TSR_LK4_04.jpg",
+         "rating":"PG",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":288,
+      "fields":{
+         "title":"Jumanji: Welcome to the Jungle",
+         "movie_id":185722,
+         "runtime":119,
+         "releaseDate":"2017-12-20",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/185722/JMNJ_DOM_TSR_1SHT_large_thumbnail.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":289,
+      "fields":{
+         "title":"Chal Mohan Ranga (Telugu)",
+         "movie_id":210447,
+         "runtime":140,
+         "releaseDate":"2018-04-04",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/210447/Chal%20Mohan%20Ranga%20Thumbnail.jpg",
+         "rating":"Not Rated",
+         "movie_genre":"Comedy",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":290,
+      "fields":{
+         "title":"Unsane (2018)",
+         "movie_id":209154,
+         "runtime":98,
+         "releaseDate":"2018-03-23",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/209154/Unsane_1Sheet_Online_Payoff.jpg",
+         "rating":"R",
+         "movie_genre":"Suspense/Thriller",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":291,
+      "fields":{
+         "title":"Leaning Into the Wind",
+         "movie_id":203144,
+         "runtime":93,
+         "releaseDate":"2018-03-09",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/203144/LeaningIntoTheWind_Poster_2.jpg",
+         "rating":"Not Rated",
+         "movie_genre":"Documentary",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":292,
+      "fields":{
+         "title":"God's Not Dead: A Light in Darkness",
+         "movie_id":208479,
+         "runtime":106,
+         "releaseDate":"2018-03-30",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/208479/GNDLID-Poster-10x14.jpg",
+         "rating":"PG",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":293,
+      "fields":{
+         "title":"Paul, Apostle of Christ",
+         "movie_id":207732,
+         "runtime":108,
+         "releaseDate":"2018-03-23",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/207732/Paul-Apostle-Of-Christ_OneS.jpg",
+         "rating":"PG13",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":294,
+      "fields":{
+         "title":"Fifty Shades Freed",
+         "movie_id":183503,
+         "runtime":101,
+         "releaseDate":"2018-02-09",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/183503/FSF_Adv1Sht_RGB_1.jpg",
+         "rating":"R",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":295,
+      "fields":{
+         "title":"Padmaavat",
+         "movie_id":207644,
+         "runtime":164,
+         "releaseDate":"2018-01-25",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/207644/1080-x-1600_Deepika-Red-Wom.jpg",
+         "rating":"Not Rated",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":296,
+      "fields":{
+         "title":"The Post",
+         "movie_id":207465,
+         "runtime":115,
+         "releaseDate":"2018-01-12",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/207465/ThePost2017.jpg",
+         "rating":"PG13",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":297,
+      "fields":{
+         "title":"Darkest Hour",
+         "movie_id":203826,
+         "runtime":125,
+         "releaseDate":"2017-12-22",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/203826/DAR_2764x4096_R14_01.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":298,
+      "fields":{
+         "title":"The Shape of Water (2017)",
+         "movie_id":203619,
+         "runtime":123,
+         "releaseDate":"2017-12-22",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/203619/SOW_ONLINE-POSTER_FINAL.jpg",
+         "rating":"R",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":299,
+      "fields":{
+         "title":"The Greatest Showman",
+         "movie_id":192076,
+         "runtime":105,
+         "releaseDate":"2017-12-20",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/192076/GreatestShowman_VerB_Poster.jpg",
+         "rating":"PG",
+         "movie_genre":"Music/Performing Arts",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":300,
+      "fields":{
+         "title":"Every Day (2018)",
+         "movie_id":208246,
+         "runtime":95,
+         "releaseDate":"2018-02-23",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/208246/EveryDayPosterHiRes.jpg",
+         "rating":"PG13",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":301,
+      "fields":{
+         "title":"The 15:17 to Paris",
+         "movie_id":208320,
+         "runtime":94,
+         "releaseDate":"2018-02-09",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/208320/The1517ToParis2018.jpg",
+         "rating":"PG13",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":302,
+      "fields":{
+         "title":"Winchester (2018)",
+         "movie_id":206837,
+         "runtime":99,
+         "releaseDate":"2018-02-02",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/206837/Winchester_OneSheet.jpg",
+         "rating":"PG13",
+         "movie_genre":"Horror",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":303,
+      "fields":{
+         "title":"Maze Runner: The Death Cure",
+         "movie_id":186638,
+         "runtime":142,
+         "releaseDate":"2018-01-26",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/186638/MazeRunnerTheDeathCure2018.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":304,
+      "fields":{
+         "title":"Call Me by Your Name",
+         "movie_id":204245,
+         "runtime":132,
+         "releaseDate":"2018-01-19",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/204245/CallMeByYourName2017.jpg",
+         "rating":"R",
+         "movie_genre":"Drama",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":305,
+      "fields":{
+         "title":"Den of Thieves",
+         "movie_id":206524,
+         "runtime":140,
+         "releaseDate":"2018-01-19",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/206524/DenOfThieves_OneSheet.jpg",
+         "rating":"R",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":306,
+      "fields":{
+         "title":"I, Tonya",
+         "movie_id":206021,
+         "runtime":120,
+         "releaseDate":"2018-01-12",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/206021/I-Tonya-Offical-One-Sheet.jpg",
+         "rating":"R",
+         "movie_genre":"Comedy",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":307,
+      "fields":{
+         "title":"Paddington 2",
+         "movie_id":202672,
+         "runtime":103,
+         "releaseDate":"2018-01-12",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/202672/Paddington2_2017.jpg",
+         "rating":"PG",
+         "movie_genre":"Comedy",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":308,
+      "fields":{
+         "title":"The Commuter",
+         "movie_id":205465,
+         "runtime":105,
+         "releaseDate":"2018-01-12",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/205465/TheCommuter_1Sht_Payoff_VF.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":309,
+      "fields":{
+         "title":"Ferdinand",
+         "movie_id":192074,
+         "runtime":108,
+         "releaseDate":"2017-12-15",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/192074/Ferdinand_VerB_RatedPoster_.JPG",
+         "rating":"PG",
+         "movie_genre":"3D",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":310,
+      "fields":{
+         "title":"Star Wars: The Last Jedi (2017)",
+         "movie_id":189929,
+         "runtime":152,
+         "releaseDate":"2017-12-15",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/189929/SB_Payoff_1-Sht_v6_Lg_TM_sm.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":311,
+      "fields":{
+         "title":"Coco (2017)",
+         "movie_id":185799,
+         "runtime":109,
+         "releaseDate":"2017-11-22",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/185799/COCO_Dom-PAYOFF_v110_Mech6.jpg",
+         "rating":"PG",
+         "movie_genre":"Animated",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":312,
+      "fields":{
+         "title":"Justice League (2017)",
+         "movie_id":190732,
+         "runtime":119,
+         "releaseDate":"2017-11-17",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/190732/Txtd_Main_Adv_1sht__JSTLG_m.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   },
+   {
+      "model":"movies.movie",
+      "pk":313,
+      "fields":{
+         "title":"Thor: Ragnarok (2017)",
+         "movie_id":199155,
+         "runtime":130,
+         "releaseDate":"2017-11-03",
+         "poster":"images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/MasterRepository/fandango/199155/Fan_final_ThorRagnarok_Blog_20170722.jpg",
+         "rating":"PG13",
+         "movie_genre":"Action/Adventure",
+         "theaters":[
+
+         ]
+      }
+   }
+]

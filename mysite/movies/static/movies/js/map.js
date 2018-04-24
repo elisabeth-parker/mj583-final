@@ -1,40 +1,76 @@
-function initMap() {
-  console.log("inside initMap");
-  //call my API to get Theaters
-  //for loop for each object:
-      //create new var with lat and long
-      //var pos = {lat: t.lat, lng: t.lng};
-      //create new marker and add to maps
-      // var marker = new google.maps.Marker({
-      //   position: pos,
-      //   map: map
-      // });
+var map;
 
-  var mid_US = {lat: 39.500, lng: -98.350};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: mid_US
-  });
+function initMap() {
+  var mid_NC = {lat: 35.900, lng: -78.873};
+  map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: mid_NC
+    });
 }
 
 function populateMap() {
-  console.log("inside populateMap");
+  //for each theater in the data from fetchData, which is stored in global container
   for (t=0; t<window.movies.data.length; t++) {
-    var latitude = window.movies.data[t].lat;
-    var longitude = window.movies.data[t].long;
-    var theater = window.movies.data[t].name;
-    console.log(theater + ": Lat: " + latitude + ", Lng: " + longitude);
-    var pos = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
-    var marker = new google.maps.Marker({
-      position: pos,
-      setMap: map
+    var theater = window.movies.data[t];
+    var id = theater.th_id;
+    var latitude = theater.lat;
+    var longitude = theater.long;
+    var address = theater.address;
+    var city = theater.city;
+    var county;
+    console.log(movies);
+
+    //info for infoWindow
+    var name = theater.name;
+    var infoWindow = new google.maps.InfoWindow({
+      maxWidth: 300
     });
+
+    //create a new map marker and add it to the map
+    var pos = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
+
+    //bin theaters by county
+    if (city == "Durham") {
+      county = "Durham County";
+      //create marker
+      var marker = new google.maps.Marker({
+        position: pos,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+        content: '<div id="content">'+
+            '<a href="/movies/theaters/' + id + '" target="_blank"><h1 id="firstHeading" class="firstHeading">' + name + '</h1></a>' + '<div><p>' + address + '</p></div>' +
+            '</div>',
+        map: map
+      });
+
+    } else if (city == "Chapel Hill") {
+      county = "Orange County";
+      var marker = new google.maps.Marker({
+        position: pos,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png',
+        content: '<div id="content">'+
+            '<a href="/movies/theaters/' + id + '" target="_blank"><h1 id="firstHeading" class="firstHeading">' + name + '</h1></a>' + '<div><p>' + address + '</p></div>' +
+            '</div>',
+        map: map
+      });
+
+    } else {
+      county = "Wake County";
+      var marker = new google.maps.Marker({
+        position: pos,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+        content: '<div id="content">'+
+            '<a href="/movies/theaters/' + id + '" target="_blank"><h1 id="firstHeading" class="firstHeading">' + name + '</h1></a>' + '<div><p>' + address + '</p></div>' +
+            '</div>',
+        map: map
+      });
+    }
+
+    //make window pop up on click
+    //thanks to StackOverflow user H.M. for this code suggestion
+    marker.addListener('mouseover', function() {
+      infoWindow.setContent(this.content);
+      infoWindow.open(this.getMap(), this);
+    });
+
   };
-  var sample_lat = window.movies.data[0].lat;
-  var sample_lng = window.movies.data[0].long;
-  var sample_pos = {lat: parseFloat(sample_lat), lng: parseFloat(sample_lng)};
-  var sample_marker = new google.maps.Marker({
-    position: sample_pos,
-    setMap: map
-  });
 };
