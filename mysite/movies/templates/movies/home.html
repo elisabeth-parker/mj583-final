@@ -34,8 +34,19 @@
     </div>
     <hr>
     <div class="row">
-      <div id="map"></div>
-      <div id="bar"></div>
+      <div class="col-md-6">
+        <div id="map"></div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="row">
+          <div id="fam-bar-holder"></div>
+        </div>
+        <div class="row">
+          <div id="date-bar-holder"></div>
+        </div>
+      </div>
+      </div>
     </div>
 {% endblock %}
 
@@ -55,9 +66,11 @@
   </script> -->
   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQoCNMvFuEHWambNcr82R-oq3J3IEn8pU&callback=initMap">
   </script>
+  <script src="{% static "movies/data/new_counts.json" %}"></script>
   <script src="{% static "movies/js/home.js" %}"></script>
   <script src="{% static "movies/js/map.js" %}"></script>
-  <script src="{% static "movies/js/bar.js" %}"></script>
+  <script src="{% static "movies/js/fam-bar.js" %}"></script>
+  <script src="{% static "movies/js/date-bar.js" %}"></script>
 
 
     <!-- <script src="{% static "winners/js/home.js" %}"></script> -->

@@ -2,11 +2,11 @@
 
 {% block breadcrumbs %}
     <li class="breadcrumb-item"><a href="{% url "movies:home" %}">Home</a></li>
-    <li class="breadcrumb-item active">List</li>
+    <li class="breadcrumb-item active">List of {{ list_type}}</li>
 {% endblock %}
 
 {% block content %}
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
@@ -15,34 +15,30 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="row">
-        <div class="col-12">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Name</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for o in objects %}
-                    <tr>
-                        <td>
-                          {% if list_type == "Movies" %}
-                            <a href="/movies/movies/{{ o.movie_id }}">
-                              {{ o }} Movie!
-                            </a>
-                          {% else %}
-                            <a href="/movies/theaters/{{ o.th_id }}">
-                              {{ o }} Theater!
-                            </a>
-                          {% endif %}
-
-                        </td>
-                    </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
+      {% for o in objects %}
+        {% if list_type == "Movies" %}
+          <div class="col-md-4">
+            <div class="row movie-tile">
+              <div class="col-md-5">
+              <a href="/movies/movies/{{ o.movie_id }}">
+                <img alt="movie poster" src="https://{{ o.poster }}" style="width: 100px;">
+              </a>
+            </div>
+              <div class="col-md-7 tile-info">
+                <a href="https://{{ o.poster }}"><h4>{{ o.title }}</h4></a>
+                <p>Rating: {{o.rating}}</p>
+                <p>Genre: {{o.movie_genre}}</p>
+              </div>
+            </div>
+          </div>
+        {% else %}
+          <a href="/movies/theaters/{{ o.th_id }}">
+            {{ o }} Theater!
+          </a>
+        {% endif %}
+      {% endfor %}
         </div>
     </div>
 {% endblock %}

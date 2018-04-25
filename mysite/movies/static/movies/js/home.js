@@ -11,7 +11,7 @@ function fetchData() {
         .done(function(data) {
             $('#raw-json').text(JSON.stringify(data, null, '  '));
             window.movies.data=data.Data;
-            console.log(window.movies.data);
+            //console.log(window.movies.data);
             populateMap();
         })
         .fail(function(){
@@ -19,9 +19,7 @@ function fetchData() {
             alert("Could not load data");
         });
 
-    console.log("about to return data");
-
-
+    //console.log("about to return data");
 }
 
 
