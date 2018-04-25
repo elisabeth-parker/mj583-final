@@ -91,6 +91,9 @@ class Command(BaseCommand):
                                 movie_genre = movie['genres'][0],
                             )
 
+                            movie_instance.theaters.add(theater_instance)
+                            theater_instance.movie_set.add(movie_instance)
+
                             variants = movie.get('variants')
                             if variants:
                                 for v, variant in enumerate(variants):

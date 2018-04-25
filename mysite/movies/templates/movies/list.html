@@ -22,21 +22,28 @@
           <div class="col-md-4">
             <div class="row movie-tile">
               <div class="col-md-5">
-              <a href="/movies/movies/{{ o.movie_id }}">
+              <a href="https://{{ o.poster }}">
                 <img alt="movie poster" src="https://{{ o.poster }}" style="width: 100px;">
               </a>
             </div>
               <div class="col-md-7 tile-info">
-                <a href="https://{{ o.poster }}"><h4>{{ o.title }}</h4></a>
+                <a href="/movies/movies/{{ o.movie_id }}"><h4>{{ o.title }}</h4></a>
                 <p>Rating: {{o.rating}}</p>
                 <p>Genre: {{o.movie_genre}}</p>
               </div>
             </div>
           </div>
         {% else %}
-          <a href="/movies/theaters/{{ o.th_id }}">
-            {{ o }} Theater!
-          </a>
+        <div class="col-md-4">
+          <div class="row theater-tile">
+            <a href="/movies/theaters/{{ o.th_id }}" class="theater-name">
+              {{ o }}
+            </a>
+            <a href="https://www.google.com/maps/search/{{o.address}}" target="_blank"><p>Address: {{o.address}}</p></a>
+            <img class="locator" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png">
+            <p>Phone: {{o.phone}}</p>
+          </div>
+        </div>
         {% endif %}
       {% endfor %}
         </div>

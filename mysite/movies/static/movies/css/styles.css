@@ -1,4 +1,20 @@
+a {
+  color: #D84646;
+}
 
+.header, .breadcrumb {
+  font-family: 'Quicksand', sans-serif;
+}
+
+a.header:hover {
+  color: #9F1F1F;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #9F1F1F;
+  text-decoration: none;
+}
 
 .movie-tile {
   border: 1px solid lightgrey;
@@ -6,17 +22,27 @@
   padding: 10px;
 }
 
-
-
 .movie-tile {
   height: 175px;
   font-size: 15px;
   margin: 0px 5px 5px 20px;
 }
 
+
 .movie-tile a img {
   border-radius: 5px;
   display: inline;
+  height: 150px;
+}
+
+.movie-tile:hover {
+  background-color: #9F1F1F;
+  color: white;
+  border: 1px solid #9F1F1F;
+}
+
+.movie-tile:hover a {
+  color: white;
 }
 
 .tile-info {
@@ -27,6 +53,51 @@
 
 .tile-info a {
   font-family: 'Quicksand', sans-serif;
+}
+
+.theater-tile {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+  height: 150px;
+  margin: 5px 5px;
+}
+.theater-tile a {
+  color: black;
+}
+
+.theater-tile a.theater-name {
+  color: #D84646;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+}
+.theater-tile a:hover {
+  color: #9F1F1F;
+}
+
+.theater-tile .locator {
+  height: 20px;
+  width: 20px;
+}
+
+.theater-tile p {
+  font-family: serif;
+}
+
+#detail-header {
+  color: white;
+  background-color: #9F1F1F;
+  text-align: center;
+  padding: 15px;
+}
+
+#poster {
+  height: 250px;
+}
+
+#movie-info {
+  margin-top: 20px;
 }
 
 

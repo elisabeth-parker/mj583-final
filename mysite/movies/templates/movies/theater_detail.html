@@ -1,7 +1,13 @@
 {% extends "movies/base.html" %}
+
+{% block breadcrumbs %}
+    <li class="breadcrumb-item"><a href="{% url "movies:home" %}">Home</a></li>
+    <li class="breadcrumb-item active">Theater Details: {{name}}</li>
+{% endblock %}
+
 {% block content %}
 <div class="row">
-  <div class="col-md-12">
+  <div id="detail-header" class="col-md-12">
     <h2>{{ name }}</h2>
   </div>
   <div class="col-md-12">
@@ -12,13 +18,26 @@
     </ul>
   </div>
   <div class="row">
-    {% for m in movies %}
-      <div class="col-md-2">
-        <a href="/movies/movies/{{ m.movie_id }}">
-          <img alt="movie poster" src="https://{{ m.poster }}" style="width: 100px;">
-          <h4>{{ m.title }}</h4>
+    <div class="col-md-12">
+      <h5>Now showing at {{name}}:</h5>
+    </div>
+  </div>
+  <div class="row">
+    {% for o in movies %}
+    <div class="col-md-4">
+      <div class="row movie-tile">
+        <div class="col-md-5">
+        <a href="https://{{ o.poster }}">
+          <img alt="movie poster" src="https://{{ o.poster }}" style="width: 100px;">
         </a>
       </div>
+        <div class="col-md-7 tile-info">
+          <a href="/movies/movies/{{ o.movie_id }}"><h4>{{ o.title }}</h4></a>
+          <p>Rating: {{o.rating}}</p>
+          <p>Genre: {{o.movie_genre}}</p>
+        </div>
+      </div>
+    </div>
     {% endfor %}
   </div>
 </div>

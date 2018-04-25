@@ -54,13 +54,14 @@ def movie_detail(request, movie_id):
       theater_objects = movie.theaters.all()
       theaters = []
       for t, theater in enumerate(theater_objects):
-          theaters.append(theater.name)
+          theaters.append(theater)
 
       context = {
         'title' : movie.title,
         'poster' : "https://" + movie.poster,
         'theaters' : theaters,
         'rating' : movie.rating,
+        'runtime' : movie.runtime,
       }
       return render(request, "movies/movie_detail.html", context)
 
