@@ -13,12 +13,23 @@ def home(request):
         'movies': models.Movie.objects.all()
     })
 
-def list_movies(request):
+def list_movies(request, movie_genre='', movie_genre1=''):
     objects = models.Movie.objects.all()
-    return render(request, "movies/list.html", {
-        "list_type": "Movies",
-        "objects": objects
-    })
+    if movie_genre == '':
+        return render(request, "movies/list.html", {
+            "list_type": "Movies",
+            "objects": objects
+        })
+    elif movie_genre1 == '':
+        return render(request, "movies/list.html", {
+            "list_type": "Movies",
+            "objects": objects.filter(movie_genre__iexact=movie_genre),
+        })
+    else:
+        return render(request, "movies/list.html", {
+            "list_type": "Movies",
+            "objects": objects.filter(movie_genre__iexact=movie_genre+"/"+movie_genre1),
+        })
 
 def list_theaters(request):
     # filter_by = request.GET.get('filter')
@@ -50,20 +61,27 @@ def list_theaters(request):
     })
 
 def movie_detail(request, movie_id):
-      movie = get_object_or_404(models.Movie, movie_id=movie_id)
-      theater_objects = movie.theaters.all()
-      theaters = []
-      for t, theater in enumerate(theater_objects):
-          theaters.append(theater)
+    movie = get_object_or_404(models.Movie, movie_id=movie_id)
+    theater_objects = movie.theaters.all()
+    showtime_objects = models.Showtime.objects.filter(movie=movie.pk)
 
-      context = {
+    theaters = []
+    for t, theater in enumerate(theater_objects):
+        theaters.append(theater)
+
+    showtimes = []
+    for s, showtime in enumerate(showtime_objects):
+        showtimes.append(showtime)
+
+    context = {
         'title' : movie.title,
         'poster' : "https://" + movie.poster,
         'theaters' : theaters,
+        'showtimes' : showtimes,
         'rating' : movie.rating,
         'runtime' : movie.runtime,
-      }
-      return render(request, "movies/movie_detail.html", context)
+    }
+    return render(request, "movies/movie_detail.html", context)
 
 def theater_detail(request, th_id):
       theater = get_object_or_404(models.Theater, th_id=th_id)

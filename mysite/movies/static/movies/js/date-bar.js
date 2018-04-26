@@ -1,4 +1,4 @@
-var data = [{"genre": "Horror", "count": 2}, {"genre": "Drama", "count": 11}, {"genre": "Action", "count": 22}, {"genre": "Thriller", "count": 1}];
+var data = [{"genre": "Horror", "count": 2}, {"genre": "Drama", "count": 11}, {"genre": "Action/Adventure", "count": 22}, {"genre": "Suspense/Thriller", "count": 1}];
 
 var genres = data.map(function(t) {
   return t.genre
@@ -62,6 +62,18 @@ barHolder.selectAll('rect.bar')
     .attr('height', function(d) {
       // the bar's height should align it with the base of the chart (y=0)
       return height - countScale(d.count);
+    })
+    .attr('fill', '#D84646')
+    .attr('cursor', 'pointer')
+    .on("mouseover", function(d) {
+      d3.select(this).attr("fill", "#9F1F1F");
+    })
+    .on("mouseleave", function(d) {
+      d3.select(this).attr("fill", "#D84646");
+    })
+    .on("click", function(d) {
+      console.log(encodeURIComponent(d.genre));
+      window.location.href = "http://localhost:8000/movies/movies/" + encodeURIComponent(d.genre);
     });
 
 // create the functions used to represent an axis using our month
@@ -89,6 +101,7 @@ var title = svg.append("text")
         .attr("y", 0 - (margin.top))
         .attr("text-anchor", "middle")
         .style("font-size", "16px")
+        .style("font-family", 'Quicksand')
         .style("text-decoration", "underline")
         .text("Date Night Material")
         .classed('bar-title', true);

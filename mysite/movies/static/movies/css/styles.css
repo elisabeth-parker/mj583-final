@@ -2,6 +2,11 @@ a {
   color: #D84646;
 }
 
+p {
+  font-family: 'Amiri', serif;
+  line-height: 10px;
+}
+
 .header, .breadcrumb {
   font-family: 'Quicksand', sans-serif;
 }
@@ -12,6 +17,11 @@ a.header:hover {
 }
 
 .breadcrumb a:hover {
+  color: #9F1F1F;
+  text-decoration: none;
+}
+
+.card-text a:hover {
   color: #9F1F1F;
   text-decoration: none;
 }
@@ -59,7 +69,7 @@ a.header:hover {
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding: 10px;
-  height: 150px;
+  height: 200px;
   margin: 5px 5px;
 }
 .theater-tile a {
@@ -79,10 +89,6 @@ a.header:hover {
 .theater-tile .locator {
   height: 20px;
   width: 20px;
-}
-
-.theater-tile p {
-  font-family: serif;
 }
 
 #detail-header {
