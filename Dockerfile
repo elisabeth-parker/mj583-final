@@ -22,3 +22,6 @@ RUN chown -R unc /opt/project
 
 # Switch to the unc user
 USER unc
+
+# Adding all local code files
+COPY . .
