@@ -1,4 +1,5 @@
 .pyc
 mysite/static
 deployment.tgz
+deployment.tar.gz
 apiKeys.js

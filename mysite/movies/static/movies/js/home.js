@@ -7,7 +7,7 @@ window.movies = {
 // fetchData
 function fetchData() {
     // $.get("/api/?" + $.param(window.movies.params))
-    $.get("http://localhost:8000/movies/api/theaters/")
+    $.get("/movies/api/theaters/")
         .done(function(data) {
             $('#raw-json').text(JSON.stringify(data, null, '  '));
             window.movies.data=data.Data;

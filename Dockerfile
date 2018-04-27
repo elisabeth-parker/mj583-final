@@ -8,6 +8,7 @@ RUN apt-get update
 # Install python 3, pip & venv (virtual env) with apt
 RUN apt-get install -y python3 python3-pip python3-venv
 
+
 # Make a directory to work in
 RUN mkdir -p /opt/project
 
