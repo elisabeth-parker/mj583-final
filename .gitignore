@@ -1,0 +1,4 @@
+.pyc
+mysite/static
+deployment.tgz
+apiKeys.js
