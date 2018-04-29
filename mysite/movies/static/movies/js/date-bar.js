@@ -73,7 +73,7 @@ barHolder.selectAll('rect.bar')
     })
     .on("click", function(d) {
       console.log(encodeURIComponent(d.genre));
-      window.location.href = "http://localhost:8000/movies/movies/" + encodeURIComponent(d.genre);
+      window.location.href = "/movies/movies/" + encodeURIComponent(d.genre);
     });
 
 // create the functions used to represent an axis using our month
